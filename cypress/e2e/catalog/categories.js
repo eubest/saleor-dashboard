@@ -34,7 +34,7 @@ describe("As an admin I want to manage categories", () => {
   let defaultChannel;
 
   before(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
 
     channelsUtils
       .getDefaultChannel()
@@ -73,7 +73,7 @@ describe("As an admin I want to manage categories", () => {
   });
 
   beforeEach(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
   });
 
   it(

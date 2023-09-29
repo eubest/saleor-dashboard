@@ -3,8 +3,8 @@
 
 import faker from "faker";
 
+import { BUTTON_SELECTORS } from "../../elements";
 import { collectionRow } from "../../elements/catalog/collection-selectors";
-import { BUTTON_SELECTORS } from "../../elements/shared/button-selectors";
 import { collectionDetailsUrl, urlList } from "../../fixtures/urlList";
 import { createChannel } from "../../support/api/requests/Channels";
 import {
@@ -36,7 +36,7 @@ describe("As an admin I want to manage collections.", () => {
   let defaultChannel;
 
   before(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
 
     channelsUtils
       .getDefaultChannel()
@@ -77,7 +77,7 @@ describe("As an admin I want to manage collections.", () => {
   });
 
   beforeEach(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
   });
 
   it(

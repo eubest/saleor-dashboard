@@ -20,12 +20,12 @@ describe("As an admin I want to export gift card", () => {
   const startsWith = "updateGCard";
 
   before(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
     activatePlugin({ id: "mirumee.notifications.admin_email" });
   });
 
   beforeEach(() => {
-    cy.clearSessionData().loginUserViaRequest();
+    cy.loginUserViaRequest();
   });
 
   it(
